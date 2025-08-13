@@ -56,5 +56,6 @@ nav:
     - 'ROS 文件分析' : 'robot/教学.md'
     - '重要源码分析' : 'robot/源码分析.md'
     - '雷达建图' : 'robot/mapping.md'
+    - 'AI 交互运动' : 'robot/ai_pub.md'
 
   - Issue : issue/issue.md
