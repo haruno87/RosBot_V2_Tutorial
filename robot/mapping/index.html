@@ -10,22 +10,28 @@
         <meta name="author" content="Yukino">
       
       
+        <link rel="canonical" href="https://mydomain.org/mysite/robot/mapping/">
       
       
+        <link rel="prev" href="../%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
       
-      <link rel="icon" href="/mysite/assets/images/favicon.png">
+      
+        <link rel="next" href="../../issue/issue/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
     
     
       
-        <title>RosBot_V2_Tutorial</title>
+        <title>雷达建图 - RosBot_V2_Tutorial</title>
       
     
     
-      <link rel="stylesheet" href="/mysite/assets/stylesheets/main.7e37652d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
       
         
-        <link rel="stylesheet" href="/mysite/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -44,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("/mysite/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#3d-slam" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,7 +88,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="/mysite/." title="RosBot_V2_Tutorial" class="md-header__button md-logo" aria-label="RosBot_V2_Tutorial" data-md-component="logo">
+    <a href="../.." title="RosBot_V2_Tutorial" class="md-header__button md-logo" aria-label="RosBot_V2_Tutorial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -97,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              雷达建图
             
           </span>
         </div>
@@ -189,7 +200,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mysite/." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
   
@@ -206,11 +217,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="/mysite/robot/quick_start/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../quick_start/" class="md-tabs__link">
           
   
   
@@ -230,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/mysite/issue/issue/" class="md-tabs__link">
+      <a href="../../issue/issue/" class="md-tabs__link">
         
   
   
@@ -265,7 +278,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/mysite/." title="RosBot_V2_Tutorial" class="md-nav__button md-logo" aria-label="RosBot_V2_Tutorial" data-md-component="logo">
+    <a href="../.." title="RosBot_V2_Tutorial" class="md-nav__button md-logo" aria-label="RosBot_V2_Tutorial" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -295,7 +308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mysite/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -314,43 +327,46 @@
       
   
   
-  
-  
     
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-      
-        
-      
-    
-    
-      
-        
-        
-      
-    
-    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
-      
-        
   
   
   
-    <a href="/mysite/robot/quick_start/" class="md-nav__link">
+    
+    
       
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
   
   
   <span class="md-ellipsis">
@@ -359,12 +375,208 @@
   </span>
   
 
-      
-        <span class="md-nav__icon md-icon"></span>
-      
-    </a>
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Quick_start
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quick_start/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    快速运行指令
+    
+  </span>
   
 
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BE%9B%E7%94%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    供电系统
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%95%99%E5%AD%A6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ROS 文件分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    重要源码分析
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    雷达建图
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    雷达建图
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pointlio" class="md-nav__link">
+    <span class="md-ellipsis">
+      PointLio建图
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PointLio建图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srcpoint_lio_unilidarpcdscanspcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意！！！！ 建图前需要先去把src/point_lio_unilidar/PCD下的scans.pcd 重命名，否则会被覆盖
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gmapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      gmapping建图
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -377,7 +589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/mysite/issue/issue/" class="md-nav__link">
+      <a href="../../issue/issue/" class="md-nav__link">
         
   
   
@@ -409,6 +621,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pointlio" class="md-nav__link">
+    <span class="md-ellipsis">
+      PointLio建图
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PointLio建图">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srcpoint_lio_unilidarpcdscanspcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意！！！！ 建图前需要先去把src/point_lio_unilidar/PCD下的scans.pcd 重命名，否则会被覆盖
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gmapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      gmapping建图
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -420,8 +675,61 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+    
+      
+    
+    <a href="https://github.com/haruno87/RosBot_V2_Tutorial/raw/main/docs/robot/mapping.md" title="查看本页的源代码" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="3d-slam">3d slam</h1>
+<h2 id="pointlio">PointLio建图</h2>
+<h3 id="srcpoint_lio_unilidarpcdscanspcd">注意！！！！ 建图前需要先去把src/point_lio_unilidar/PCD下的scans.pcd 重命名，否则会被覆盖</h3>
+<p><code>https://github.com/unitreerobotics/point_lio_unilidar</code> Point_lio 三维 SLAM</p>
+<p><code>https://github.com/unitreerobotics/unilidar_sdk2</code>宇树 L2 雷达</p>
+<p>主要参考这两个官方的文档进行操作完成操作。</p>
+<p><code>https://github.com/66Lau/NEXTE_Sentry_Nav?tab=readme-ov-file</code>这个项目也作为主要的参考。</p>
+<p>可以使用 <code>roslaunch nav lio_mapping.launch</code>打开建图的 launch 文件，再打开电机控制节点 <code>rosrun service motor_control.py</code>， 然后使用键盘控制节点 <code>rosrun service key_scans.py</code> 进行键盘遥控建图，在 rviz 中确定建图质量之后退出节点就会自动保存在默认路径的 PCD/ 下，默认名称是 scans.pcd。</p>
+<p>需要确保运行建图节点之后，需要将保存路径下的 PCD 文件重命名防止被覆盖，如果发现建的图关闭节点之后没有保存下来，在 <code>src/point_lio_unilidar/config/unilidar_l2.yaml</code>的尾部看看 <code>pcd_save_en</code> 有没有设置为 true。</p>
+<pre><code>pcd_save:
+    pcd_save_en: false       # save map to pcd file
+    interval: -1            # how many LiDAR frames saved in each pcd file; 
+                                 # -1 : all frames will be saved in ONE pcd file, may lead to memory crash when having too much frames.
+</code></pre>
+<p>在保存好 3D 的 PCD 地图之后，使用静态方法转换为二维栅格地图</p>
+<p><code>roslaunch pcd2pgm run.launch</code></p>
+<p><code>roslaunch nav map_saver.launch</code></p>
+<p>可以分别去这两个文件下修改文件的路径和保存的配置。</p>
+<pre><code>&lt;node pkg=&quot;pcl_ros&quot; type=&quot;pcd_to_pointcloud&quot; name=&quot;map_publisher&quot; output=&quot;screen&quot;
+        args=&quot;/home/orangepi/max_ws/src/point_lio_unilidar/PCD/scans_0807.pcd 5 _frame_id:=map cloud_pcd:=map&quot; /&gt;
+
+</code></pre>
+<p>快速运行指令中的 point_loc.launch 的这条指令就是将保存好的 PCD 3 维地图转换为 pointcloud 供 src/service/scripts/localisation.py 进行匹配定位的。</p>
+<p>宇树雷达可能出现的问题，要是雷达上电初始化的时候不够平稳抖动激烈的话整个系统都会跑飞。</p>
+<h2 id="gmapping">gmapping建图</h2>
+<p>使用 gmapping 建图必须有 odom 到基坐标系的 tf 变换，这样才能建立起 map 到 odom 之间的变换。在src/service/scripts/motor_control.py 中已经实现了 odom 到 laser 的坐标系变换。</p>
+<p>首先先确保雷达节点已经打开，roslaunch rplidar_ros rplidar_a1.launch,然后启动电机节点 rosrun service motor_control.py，启动建图节点 roslaunch rpliar_ros gmapping.launch ，通过键盘进行遥控建图，确保建图质量之后使用 roslaunch nav map_saver.launch 保存地图即可。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -441,6 +749,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 重要源码分析">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                重要源码分析
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../issue/issue/" class="md-footer__link md-footer__link--next" aria-label="下一页: Issue">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Issue
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
@@ -467,10 +813,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/mysite/", "features": ["announce.dismiss", "navigation.instant", "navigation.prune", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.select", "content.action.view", "content.code.annotate"], "search": "/mysite/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "navigation.instant", "navigation.prune", "navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.top", "navigation.footer", "search.suggest", "search.highlight", "search.share", "toc.follow", "navigation.expand", "navigation.indexes", "content.tabs.link", "content.tooltips", "content.code.copy", "content.code.select", "content.action.view", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="/mysite/assets/javascripts/bundle.50899def.min.js"></script>
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
       
     
   </body>
