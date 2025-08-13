@@ -1,1 +1,60 @@
-site_name: My Docs
+site_name: RosBot_V2_Tutorial
+site_url: https://mydomain.org/mysite
+site_author: Yukino
+theme:
+  name: material
+  palette:
+    primary: white
+  
+  features: 
+    - announce.dismiss # 可关闭公告栏
+    - navigation.instant # 页面无刷新切换
+    - navigation.prune # 只渲染可见导航项
+    # - header.autohide  # 自动隐藏头部
+    # - navigation.instant.progress # 页面切换进度条
+    # - navigation.prune # 只渲染可见导航项
+    - navigation.tracking # 滚动时URL锚点自动更新
+    - navigation.tabs # 一级导航显示为顶部Tab
+    # - navigation.tabs.sticky  # Tab栏吸顶
+    - navigation.sections # 侧边栏分组
+    - navigation.top # 返回顶部按钮
+    - navigation.footer # 页脚显示在侧边栏
+    - search.suggest # 搜索建议
+    - search.highlight # 搜索高亮
+    - search.share # 搜索结果分享
+    - toc.follow # 目录跟随滚动
+    # - toc.integrate # 目录集成到侧边栏
+    - navigation.expand # 默认展开所有目录
+    - navigation.indexes # 支持节索引页
+    - content.tabs.link # 支持标签页链接
+    - content.tooltips # 支持鼠标悬浮提示
+    - content.code.copy # 代码块一键复制
+    - content.code.select # 代码块一键全选
+    # - content.action.edit # 编辑按钮
+    - content.action.view # 查看源码按钮
+    - content.code.annotate # 代码注释
+  language: zh # 一些提示性的文字会变成中文
+  icon:
+    repo: fontawesome/brands/github #右上角图标
+    previous: fontawesome/solid/angle-left
+    # top: fontawesome/solid/angles-up
+    alternate: fontawesome/solid/language
+
+plugins: 
+  - search
+
+
+edit_uri: edit/main/docs # 编辑按钮跳转的链接 
+repo_url: https://github.com/haruno87/RosBot_V2_Tutorial # 右上角点击跳转的链接
+repo_name: Yukino.github.io # 右上角的名字
+
+nav:
+  - Home: 'index.md'
+  - Quick_start : 
+    - '快速运行指令' : 'robot/quick_start.md'
+    - '供电系统' : 'robot/供电.md'
+    - 'ROS 文件分析' : 'robot/教学.md'
+    - '重要源码分析' : 'robot/源码分析.md'
+    - '雷达建图' : 'robot/mapping.md'
+
+  - Issue : issue/issue.md
