@@ -344,6 +344,8 @@
       
         
       
+        
+      
     
     
     
@@ -598,6 +600,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ai_pub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI 交互运动
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -750,6 +775,7 @@
 文中的代码使用的是一秒发送九个数据包的形式进行电机控制，简单的说是第 1,4,7 帧发送心跳包，第 2 帧发送速度模式设置指令，其余帧发送速度值控制指定，电机运行在速度闭环控制模式下。</p>
 <h3 id="_2">必须特别注意的是！！！！！</h3>
 <p>该电机基于 modbus 协议通信，需要确保写线圈，读寄存器，crc 校验等的正确，否则无效指令轻则被电机忽略，严重的话会导致电机自动关闭通信。</p>
+<p>电机主要订阅/cmd_vel 节点来执行 move_base 规划出来的指令。</p>
 <h2 id="2-3d">2. 宇树3d雷达</h2>
 <p>使用宇树 l2 雷达必须有<code>src/point_lio_unilidar</code>,<code>src/unitree_lidar_sdk</code>,<code>src/unitree_lidar_ros</code>,<code>src/point_lio_unilidar</code></p>
 <p>这几个功能包，具体的信息可以在 <code>ROS 文件分析</code>的末尾链接仓库查看。</p>
@@ -764,6 +790,16 @@
 <pre><code> WHEELTEC EC130 自动回充附送资料 链接: https://pan.baidu.com/s/1BcGyfEuJNQ_vHoU0TKT7PQ 已自带加速，直接点击下载即可
 </code></pre>
 <p>电源供电板上已经引出了单片机的供电接口（5v1A），需要将其焊接到电源接口上。</p>
+<p>FreeRtos 快速入门教程：</p>
+<p>速通：</p>
+<pre><code>https://www.bilibili.com/video/BV1sE411d7x7/?spm_id_from=333.337.search-card.all.click&amp;vd_source=16653787726583a107f817924f9f09fe
+</code></pre>
+<p>较为系统：</p>
+<pre><code>https://www.bilibili.com/video/BV1Jw411i7Fz/?spm_id_from=333.337.search-card.all.click
+</code></pre>
+<p>cubeide 教程：</p>
+<pre><code>https://www.bilibili.com/video/BV1KN41117KJ/?spm_id_from=333.337.search-card.all.click&amp;vd_source=16653787726583a107f817924f9f09fe
+</code></pre>
 
 
 

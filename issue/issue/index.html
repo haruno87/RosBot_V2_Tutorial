@@ -13,7 +13,7 @@
         <link rel="canonical" href="https://mydomain.org/mysite/issue/issue/">
       
       
-        <link rel="prev" href="../../robot/mapping/">
+        <link rel="prev" href="../../robot/ai_pub/">
       
       
       
@@ -340,6 +340,8 @@
       
         
       
+        
+      
     
     
     
@@ -442,6 +444,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 为什么3d导航避障效果不好
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -483,6 +494,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#2-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 为什么3d导航避障效果不好
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -518,6 +538,10 @@
 <p>2）：确保供电电压稳定</p>
 <p>3）：确保雷达不要过热</p>
 <p>4）：检查串口接线有没有松动</p>
+<h2 id="2-3d">2. 为什么3d导航避障效果不好</h2>
+<p>1）：检查这几个 move_base 中的坐标系配置，调整 global frame 和 local frame 找到效果最好的选择。</p>
+<p><img alt="1755090932926" src="../image/issue/1755090932926.png" /></p>
+<p>2）：由于 2d 建图和 3d 建图产生的栅格地图尺寸不同，不可以直接替换。</p>
 
 
 
@@ -555,7 +579,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../robot/mapping/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 雷达建图">
+          <a href="../../robot/ai_pub/" class="md-footer__link md-footer__link--prev" aria-label="上一页: AI 交互运动">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -565,7 +589,7 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                雷达建图
+                AI 交互运动
               </div>
             </div>
           </a>
