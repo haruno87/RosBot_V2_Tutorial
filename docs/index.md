@@ -45,6 +45,8 @@ https://www.bilibili.com/video/BV1BP4y1o7pw/?spm_id_from=333.337.search-card.all
 
 ![1755228542331](image/index/1755228542331.png)
 
+![1755228973907](image/index/1755228973907.png)
+
 文档使用教程：
 
 `https://www.mkdocs.org/getting-started/#creating-a-new-project`
