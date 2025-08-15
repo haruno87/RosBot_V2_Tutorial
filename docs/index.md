@@ -8,7 +8,6 @@
 https://www.bilibili.com/video/BV1zt411G7Vn/?spm_id_from=333.337.search-card.all.click&vd_source=16653787726583a107f817924f9f09fe
 ```
 
-
 在此基础上如果需要对特定的章节知识需要补充，可以专门挑选特定章节补充
 
 ```
@@ -29,3 +28,17 @@ http://www.autolabor.com.cn/book/ROSTutorials/chapter1.html
 ```
 https://www.bilibili.com/video/BV1BP4y1o7pw/?spm_id_from=333.337.search-card.all.click&vd_source=16653787726583a107f817924f9f09fe
 ```
+
+
+
+# 如何添加/修改文档
+
+1):首先将仓库 clone 到本地
+
+2):在终端运行 `pip install mkdocs`按照依赖
+
+3):运行 `mkdocs serve`，然后在终端的网页链接中跳转，就可以到页面中，本地的修改保存后会自动同步文档
+
+## 注意文件的路径，可以参考 `mkdocs.yml`中的形式
+
+![1755228542331](image/index/1755228542331.png)
