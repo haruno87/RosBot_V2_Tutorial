@@ -57,5 +57,6 @@ nav:
     - '重要源码分析' : 'robot/源码分析.md'
     - '雷达建图' : 'robot/mapping.md'
     - 'AI 交互运动' : 'robot/ai_pub.md'
+    - '多模态交互软件' : 'robot/ai_multi_inter.md'
 
   - Issue : issue/issue.md
