@@ -29,15 +29,13 @@ http://www.autolabor.com.cn/book/ROSTutorials/chapter1.html
 https://www.bilibili.com/video/BV1BP4y1o7pw/?spm_id_from=333.337.search-card.all.click&vd_source=16653787726583a107f817924f9f09fe
 ```
 
-
-
 # 如何添加/修改文档
 
 1):首先将仓库 clone 到本地
 
 2):在终端运行 `pip install mkdocs`按照依赖
 
-3):运行 `mkdocs serve`，然后在终端的网页链接中跳转，就可以到页面中，本地的修改保存后会自动同步文档
+3):运行 `mkdocs serve`，然后在终端的网页链接中跳转，就可以到页面中，本地的修改保存后会自动同步文档，如果报错显示缺主题可以`pip install mkdocs-material`
 
 （注意需要启动 mkdocs serve 再保存才能修改成功，本地修改成功后发布到 github 仓库中）
 

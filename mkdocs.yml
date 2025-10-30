@@ -50,7 +50,7 @@ repo_name: Yukino.github.io # 右上角的名字
 
 nav:
   - Home: 'index.md'
-  - Quick_start : 
+  - 二代机 : 
     - '快速运行指令' : 'robot/quick_start.md'
     - '供电系统' : 'robot/供电.md'
     - 'ROS 文件分析' : 'robot/教学.md'
@@ -58,5 +58,7 @@ nav:
     - '雷达建图' : 'robot/mapping.md'
     - 'AI 交互运动' : 'robot/ai_pub.md'
     - '多模态交互软件' : 'robot/ai_multi_inter.md'
+  - 初代机 :
+    - '雷达建图' : 'first_robo\mapping_1.md'
 
   - Issue : issue/issue.md
