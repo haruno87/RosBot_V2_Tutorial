@@ -10,13 +10,9 @@
         <meta name="author" content="Yukino">
       
       
-        <link rel="canonical" href="https://mydomain.org/mysite/robot/%E6%95%99%E5%AD%A6/">
+        <link rel="canonical" href="https://mydomain.org/mysite/first_robo/mapping_1/">
       
       
-        <link rel="prev" href="../%E4%BE%9B%E7%94%B5/">
-      
-      
-        <link rel="next" href="../%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>ROS 文件分析 - RosBot_V2_Tutorial</title>
+        <title>初代机2D雷达建图 - RosBot_V2_Tutorial</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-" class="md-skip">
+        <a href="#2d" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ROS 文件分析
+              初代机2D雷达建图
             
           </span>
         </div>
@@ -217,13 +213,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../quick_start/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../robot/quick_start/" class="md-tabs__link">
           
   
   
@@ -245,7 +239,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../first_robo/mapping_1.md" class="md-tabs__link">
+        <a href="../mapping_1.md" class="md-tabs__link">
           
   
   
@@ -349,50 +343,47 @@
       
   
   
+  
+  
     
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
   
   
   
-    
-    
+    <a href="../../robot/quick_start/" class="md-nav__link">
       
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-    
-      
-        
-        
-      
-      
-        
-      
-    
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
-            
   
   
   <span class="md-ellipsis">
@@ -401,257 +392,12 @@
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            二代机
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../quick_start/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    快速运行指令
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E4%BE%9B%E7%94%B5/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    供电系统
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+        <span class="md-nav__icon md-icon"></span>
       
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    ROS 文件分析
-    
-  </span>
+    </a>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    ROS 文件分析
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-launch" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 寻找主要的 launch 文件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2launch" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.分析launch文件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-2d-3d" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 怎么切换 2d 或者 3d 雷达？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 外设参考文档：
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    重要源码分析
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mapping/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    雷达建图
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ai_pub/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    AI 交互运动
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ai_multi_inter/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    多模态交互软件
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
       
     </li>
   
@@ -688,7 +434,7 @@
   
   
   
-    <a href="../../first_robo/mapping_1.md" class="md-nav__link">
+    <a href="../mapping_1.md" class="md-nav__link">
       
   
   
@@ -758,36 +504,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-launch" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 寻找主要的 launch 文件
+      建图前置信息
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2launch" class="md-nav__link">
+  <a href="#gmapping" class="md-nav__link">
     <span class="md-ellipsis">
-      2.分析launch文件
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-2d-3d" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 怎么切换 2d 或者 3d 雷达？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. 外设参考文档：
+      Gmapping建图
     </span>
   </a>
   
@@ -813,114 +541,30 @@
     
       
     
-    <a href="https://github.com/haruno87/RosBot_V2_Tutorial/raw/main/docs/robot/教学.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/haruno87/RosBot_V2_Tutorial/raw/main/docs/first_robo/mapping_1.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="-">技术路线     三维建图 - 三维定位 - 二维导航</h1>
-<h2 id="1-launch">1. 寻找主要的 launch 文件</h2>
-<p>以 <code>快速运行指令</code> 中的指令入手</p>
-<pre><code>roslaunch nav point_loc.launch
-</code></pre>
-<p>其中 roslaunch 启动的是一个名为 nav 的功能包下面名叫 point_loc.launch 的文件，我们此时的路径是 <code>~/max_ws</code> ，所以我们去 max_ws 下的 src(一般的代码都是放在 src)中找到 nav ，然后在 launch 目录下找到 point_loc.launch 这个文件：</p>
-<pre><code>&lt;launch&gt;
-    &lt;include file=&quot;$(find unitree_lidar_ros)/launch/run_without_rviz.launch&quot; /&gt;
-    &lt;include file=&quot;$(find point_lio_unilidar)/launch/mapping_unilidar_l2.launch&quot; /&gt;
-
-    &lt;node name=&quot;localisation&quot; pkg=&quot;service&quot; type=&quot;localisation.py&quot; output=&quot;screen&quot;&gt;
-        &lt;/node&gt;
-
-    &lt;node pkg=&quot;service&quot; type=&quot;transform_fusion.py&quot; name=&quot;transform_fusion&quot; output=&quot;screen&quot; /&gt;
-
-
-    &lt;node pkg=&quot;pcl_ros&quot; type=&quot;pcd_to_pointcloud&quot; name=&quot;map_publisher&quot; output=&quot;screen&quot;
-        args=&quot;/home/orangepi/max_ws/src/point_lio_unilidar/PCD/scans_0807.pcd 5 _frame_id:=map cloud_pcd:=map&quot; /&gt;
-
-
-    &lt;node name = &quot;map_server&quot; pkg = &quot;map_server&quot; type = &quot;map_server&quot; args=&quot;$(find nav)/map/nav0807.yaml /map:=prior_map&quot;/&gt;
-
-
-    &lt;include file=&quot;$(find nav)/launch/pointcloud2laserscan.launch&quot; /&gt;
-
-    &lt;!-- &lt;node name = &quot;Trans_TF_2d&quot; pkg = &quot;service&quot; type = &quot;Trans_TF_2d&quot;/&gt; --&gt;
-
-
-
-
-    &lt;node pkg=&quot;tf2_ros&quot; type=&quot;static_transform_publisher&quot; name=&quot;tf_pub_1&quot; args=&quot;-0.10 0 0 0 0 0 aft_mapped aft_mapped_body&quot; /&gt;
-    &lt;!-- 发布一个雷达初始位置camera_init到机器人足端初始位置body_init的静态映射 --&gt;
-    &lt;node pkg=&quot;tf2_ros&quot; type=&quot;static_transform_publisher&quot; name=&quot;tf_pub_2&quot; args=&quot;0.10 0 0 0 0 0 camera_init robot_foot_init&quot; /&gt;
-    &lt;!-- &lt;node pkg=&quot;service&quot; type=&quot;publish_initial_pose.py&quot; name=&quot;publish_initial_pose&quot; output=&quot;screen&quot; /&gt; --&gt;
-
-    &lt;include file=&quot;$(find nav)/launch/move_base_TEB.launch&quot; /&gt;
-
-     &lt;node pkg=&quot;jie_ware&quot; type=&quot;costmap_cleaner&quot; name=&quot;costmap_cleaner&quot; /&gt;
-    &lt;node name=&quot;motor_control&quot; pkg=&quot;service&quot; type=&quot;motor_control.py&quot; output=&quot;screen&quot;/&gt;
-
-
-    &lt;node name=&quot;move_point&quot; pkg=&quot;service&quot; type=&quot;move_point.py&quot; output=&quot;screen&quot;&gt;
-    &lt;/node&gt;
-&lt;/launch&gt;
-</code></pre>
-<p>分析这份 launch 文件：
-其中 <code>&lt;include file="$(find unitree_lidar_ros)/launch/run_without_rviz.launch" /&gt;</code> 这种 <code>include file</code> 的文件也是一个 launch 文件，可以跳转到对应文件继续分析。</p>
-<p>而 <code>&lt;nodename="move_point"pkg="service"type="move_point.py"output="screen"</code></p>
-<p>对应的就是一个小节点，可以跳转到对应文件查看具体实现。</p>
-<h2 id="2launch">2.分析launch文件</h2>
-<p><code>&lt;includefile="$(find unitree_lidar_ros)/launch/run_without_rviz.launch"/&gt;</code></p>
-<p><code>&lt;includefile="$(find point_lio_unilidar)/launch/mapping_unilidar_l2.launch"/&gt;</code></p>
-<p>这两个节点启动的分别是 3d 雷达的运行节点已经 Point_lio 的 SLAM 节点，（SLAM 全称是 simultaneous localization and mapping同时定位与映射，可以简单理解为建图加定位）。</p>
-<p><code>&lt;nodename="localisation"pkg="service"type="localisation.py"output="screen"&gt;</code></p>
-<p><code>&lt;/node&gt;</code></p>
-<p><code>&lt;nodepkg="service"type="transform_fusion.py"name="transform_fusion"output="screen"/&gt;</code></p>
-<p>这两个文件分别是定位节点（将建好的静态 3d 地图与雷达扫描到的特征信息进行匹配)以及坐标系转换节点（建立转换坐标 map 到机器人基坐标系 aft_mapped的 2d 转换，这是由于 3d 雷达多了很多维度的信息，只需要提取部分）。</p>
-<pre><code>&lt;node pkg=&quot;pcl_ros&quot; type=&quot;pcd_to_pointcloud&quot; name=&quot;map_publisher&quot; output=&quot;screen&quot;
-        args=&quot;/home/orangepi/max_ws/src/point_lio_unilidar/PCD/scans_0807.pcd 5 _frame_id:=map cloud_pcd:=map&quot; /&gt;
-
-</code></pre>
-<p>这个节点的作用是发布静态的 3d 地图供前面两个节点定位以及坐标变换使用，可以根据 args 中的路径找到对应的地图，后续有新建的地图可以直接更改名字替换掉。</p>
-<pre><code>&lt;node name = &quot;map_server&quot; pkg = &quot;map_server&quot; type = &quot;map_server&quot; args=&quot;$(find nav)/map/nav0807.yaml /map:=prior_map&quot;/&gt;
-
-</code></pre>
-<p>这个节点的作用是发布 map 的 tf 坐标变换，读到这里可能会有疑惑，为什么要发布两个 map？</p>
-<p>这是由于 <code>pcl_ros</code>这个节点发布的 map 是一个话题和坐标用于 三维空间的定位与 tf 转换，而导航 move_base需要的是二维栅格地图，这就需要 <code>map_server</code> 发布栅格地图的话题，但是由于/map 这个话题被占用了，所以发布到 <code>prior_map</code> 这个话题上，需要注意的是这两个节点的坐标系 frame 是一样的。</p>
-<pre><code>&lt;include file=&quot;$(find nav)/launch/pointcloud2laserscan.launch&quot; /&gt;
-
-</code></pre>
-<p>这个节点的作用是将 3d 雷达的点云由 3d 转为 2d 用于导航使用。</p>
-<pre><code>    &lt;node pkg=&quot;tf2_ros&quot; type=&quot;static_transform_publisher&quot; name=&quot;tf_pub_2&quot; args=&quot;0.10 0 0 0 0 0 camera_init robot_foot_init&quot; /&gt;
-    &lt;node pkg=&quot;tf2_ros&quot; type=&quot;static_transform_publisher&quot; name=&quot;tf_pub_1&quot; args=&quot;-0.10 0 0 0 0 0 aft_mapped aft_mapped_body&quot; /&gt;
-
-</code></pre>
-<p>这两个指令是发布坐标变换的，将三维空间下的机器人坐标转换为二维平面，但是实测下来效果并没有更好。</p>
-<p>这里补充机器人运动的坐标系变换：
-map - &gt; odom - &gt; base_link 即 map - &gt; 里程计 - &gt; 基坐标。这里我的三维里程计是 camera_init，三维基坐标系是 aft_mapped。</p>
-<pre><code>&lt;include file=&quot;$(find nav)/launch/move_base_TEB.launch&quot; /&gt;
-
-</code></pre>
-<p>上面这条指令非常重要，是二维导航的关键,<code>src/nav/param</code> 中看到配置文件，其中有与地图相关的文件（带有 costmap 的）以及与运动性能相关的文件（teb_local_planner_params.yaml），其中需要特别注意的是 <code>global_costmap_params</code>和 <code>local_costmap_params</code> 中的 <code>global_frame</code> 和 <code>robot_base_frame</code> 。可以根据上面谈到的坐标系变换理解一下。其中 local_costmap中的 global_frame 官方建议是填写里程计坐标系，但是实测下来 map 更加稳定。</p>
-<pre><code>nodepkg=&quot;jie_ware&quot;type=&quot;costmap_cleaner&quot;name=&quot;costmap_cleaner&quot;
-</code></pre>
-<p>上面这条指令是用于手动调整机器人位姿时清除一次地图中残留的代价地图。</p>
-<pre><code>    &lt;node name=&quot;motor_control&quot; pkg=&quot;service&quot; type=&quot;motor_control.py&quot; output=&quot;screen&quot;/&gt;
-
-</code></pre>
-<p>这条指令是电机控制节点的指令，如果使用 2d 雷达，这个节点也会自动订阅 imu 的话题进行融合，3d 只需要打开这个节点就好。需要注意的是，service 功能包下还有键盘控制的节点，当需要遥控建图或进行运动测试时可以启用 <code>rosrun service key_scans.py</code>，使用键盘的 wasd 可以进行控制，按下 q 就退出节点。</p>
-<pre><code>&lt;node name=&quot;move_point&quot; pkg=&quot;service&quot; type=&quot;move_point.py&quot; output=&quot;screen&quot;&gt;
-    &lt;/node&gt;
-</code></pre>
-<p>最后这个节点是用来订阅语音模型发来的信息，例如我们使用指令控制机器人带领我们去饮水机附近，就是通过<code>src/baidu_model_chat_linux_0812/functions.py</code> 中 function calling 发布的<code>/voice_keyword</code>话题（发布信息的格式为<code>{"keyword": "go to point a"}</code>）</p>
-<h2 id="3-2d-3d">3. 怎么切换 2d 或者 3d 雷达？</h2>
-<p>现在使用的是 3d 雷达，启动的文件是 <code>roslaunch nav point_loc.launch</code> 文件。使用 2d 雷达的话，首先需要把 <code>src/nav/param</code>进行重命名，然后把<code>src/nav/param_rplidar</code> 重命名为 <code>src/nav/param</code>，再把<code>src/nav/launch/move_base_rplidar.launch</code>重命名为<code>src/nav/launch/move_base.launch</code>，最后启动 <code>roslaunch nav start.launch</code>。</p>
-<h2 id="4">4. 外设参考文档：</h2>
-<p><code>https://github.com/unitreerobotics/point_lio_unilidar</code> Point_lio 三维 SLAM</p>
-<p><code>https://github.com/unitreerobotics/unilidar_sdk2</code>宇树 L2 雷达</p>
-<p><code>https://www.yahboom.com/study/IMU</code> IMU模块 密码<code>dj32</code></p>
-<p><code>https://www.yahboom.com/study/RPLIDAR_SLAMTEC</code>  二维激光雷达 密码 <code>32fm</code>  ***这里也有很丰富的 ros 课程资料</p>
-<p><code>https://github.com/66Lau/NEXTE_Sentry_Nav?tab=readme-ov-file</code> 非常重要的路径参考</p>
+<h1 id="2d">初代机2D雷达建图</h1>
+<h2 id="_1">建图前置信息</h2>
+<p>使用gmapping进行建图需要保证存在 <code>odom -&gt; laser</code>的TF变换，即启动 <code>rosrun service_pkg odom.py</code>，这个代码会同时启动电机和初始化里程计odom。</p>
+<p>在启动了odom之后，需要进行遥控操作建图，<code>rosrun service_pkg key_scans.py</code>打开节点后再这个终端里面wsad进行遥控，按下x停止。</p>
+<p>在保证打开里程计和遥控节点之后，就可以实验gmapping进行slam建图了。</p>
+<p>首先需要注意的是地图的存放路径：<code>src/nav/map</code>。这里面存着目前有的所有地图。<img alt="1761791118534" src="../image/mapping_1/1761791118534.png" /></p>
+<p>需要更换地图时，只需要修改 <code>src/nav/launch/map_server.launch</code>下的 <code>&lt;arg name="map" default="map_0706.yaml" /&gt;</code>，需要注意的是，必须保证地图对应的png和yaml同时存在并且名称一致。<img alt="1761791217822" src="../image/mapping_1/1761791217822.png" /></p>
+<h2 id="gmapping">Gmapping建图</h2>
+<p>确定好需要保存地图的名称，在 <code>src/nav/launch/map_saver.launch</code>中修改。</p>
+<p><img alt="1761791641116" src="../image/mapping_1/1761791641116.png" /></p>
+<p>首先初始化电机雷达imu，<code>roslaunch nav self_init.launch</code>，然后启动gmapping节点 <code>roslaunch rplidar_ros gmapping.launch</code>，正常启动的话会有如下信息：</p>
+<p><img alt="1761795862842" src="../image/mapping_1/1761795862842.png" /></p>
+<p>此时已经开始建图了，接下来只需要打开遥控节点 <code>rosrun service_pkg key_scans.py</code>走几步把整个地图显示出来就好。打开 <code>rviz</code>调整出地图观看（在终端直接输入rviz就好）。</p>
+<p><img alt="1761796060146" src="../image/mapping_1/1761796060146.png" /></p>
+<p><img alt="1761796107623" src="../image/mapping_1/1761796107623.png" /><img alt="1761796120392" src="../image/mapping_1/1761796120392.png" /></p>
+<p>出现下面这种地图说明移动太快了也可能是参数问题：
+<img alt="1761796860579" src="../image/mapping_1/1761796860579.png" /></p>
 
 
 
@@ -953,44 +597,6 @@ map - &gt; odom - &gt; base_link 即 map - &gt; 里程计 - &gt; 基坐标。这
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="页脚" >
-        
-          
-          <a href="../%E4%BE%9B%E7%94%B5/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 供电系统">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              <div class="md-ellipsis">
-                供电系统
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/" class="md-footer__link md-footer__link--next" aria-label="下一页: 重要源码分析">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                重要源码分析
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
